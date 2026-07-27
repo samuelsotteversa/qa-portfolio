@@ -4,7 +4,7 @@
 
 **System Under Test:** VersaSaúde Platform (EHR / Healthcare Management)
 
-**Module:** Citizen Registration (`Cadastro → Cidadão`)
+**Module:** Citizen Registration (`Registration -> Citizen`)
 
 **Type:** Functional Testing • UI/UX Testing • Integration Testing
 
