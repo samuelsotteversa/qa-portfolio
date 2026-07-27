@@ -41,16 +41,5 @@ The primary line renders without parentheses:
 
 ---
 
-## 🛠️ Root Cause Analysis (DOM / Code Inspection)
-Inspection of the blade component/template revealed that the conditional logic for rendering `social_name` omitted the wrapping parentheses around the official `name` variable:
-
-```html
-<!-- ❌ Incorrect DOM Rendering -->
-<div class="autocomplete-item-title font-bold">
-  {{ citizen.social_name }} {{ citizen.official_name }}
-</div>
-
-<!-- ✅ Expected DOM Rendering -->
-<div class="autocomplete-item-title font-bold">
-  {{ citizen.social_name }} ({{ citizen.official_name }})
-</div>
+## 🛠️ Inspector / Technical Findings (DOM / Code Inspection)
+Inspecting the element via Chrome DevTools confirms that the text node rendered inside .autocomplete-item-title contains a single string without parenthetical delimiters separating social_name and official_name.
