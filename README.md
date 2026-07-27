@@ -1,126 +1,129 @@
-# Quality Assurance Portfolio
+# Quality Assurance & Software Testing Portfolio
 
-Welcome to my QA Portfolio.
+Welcome to my Quality Assurance portfolio.
 
-This repository contains practical Quality Assurance projects focused on API testing, business rule validation, database verification, and defect analysis using real-world scenarios.
+This repository showcases practical QA projects focused on **REST API testing**, **functional testing**, **UI/UX validation**, **multi-tenant systems**, and **business rule verification**.
+
+The documentation follows a **Docs-as-Code** approach, using structured Markdown to organize project overviews, test cases, and bug reports while demonstrating real-world QA practices such as API validation, SQL verification, DOM inspection, log analysis, and queue monitoring.
 
 ---
 
-## Projects
+## Portfolio Projects
+
+| Project | Domain | Primary Focus | Technologies |
+|---------|--------|---------------|--------------|
+| **📁 [api-testing-auth](./api-testing-auth)** | Healthcare Platform | REST API Testing, Business Rule Validation, API Contract Testing | Postman, Insomnia, Laravel, JSON, SQL |
+| **📁 [ui-layout-bug-report](./ui-layout-bug-report)** | Healthcare Platform | Functional Testing, UI/UX Validation, CADSUS Integration | Chrome DevTools, DOM Inspection, CADSUS API |
+| **📁 [sigtap-multi-tenant-import](./sigtap-multi-tenant-import)** | Healthcare Management | Multi-Tenant Processing, SIGTAP Import Validation, Business Rules | Laravel Horizon, Redis Queue, SQL, PHP |
+
+---
+
+## Featured Projects
 
 ### REST API Validation & Business Logic Testing
 
-**Domain:** Healthcare Platform / Authentication Services
+**Focus**
 
-**Type:** Backend API Testing • Business Rule Validation • Edge Case Testing
+Password reset workflow validation, API contract verification, and conditional business rule testing.
 
-**Status:** ✅ Completed
+**Highlights**
 
-**Repository:** [REST API Validation & Business Logic Testing](./api-testing-auth)
+- Validated request payloads and API responses.
+- Verified conditional business rules.
+- Identified edge cases affecting password recovery.
+- Collaborated with developers to validate the implemented solution.
 
----
+**Artifacts**
 
-### Project Overview
-
-This project documents the QA process performed on a password reset endpoint for a healthcare platform.
-
-The objective was to validate the API contract, verify business rules, ensure proper request validation, and test edge cases related to user identity verification.
-
-**Endpoint**
-
-```http
-POST /apiPassport/cds/auth/reset-password
-```
+- Project Overview
+- Test Cases
+- Business Rules
+- API Request & Response Examples
 
 ---
 
-## Technologies
+### Citizen Registration List Redesign & Usability
 
-| Technology | Purpose |
-|------------|---------|
-| Postman / Insomnia | API testing |
-| REST / JSON | Request and response validation |
-| PostgreSQL / MySQL | Database verification |
-| Laravel / PHP | Backend under test |
-| GitHub Issues | Bug tracking |
-| GitHub Projects | Task management |
+**Focus**
 
----
+Validation of the redesigned citizen search experience, including auto-complete behavior, filtering logic, and CADSUS integration.
 
-## Business Rules
+**Highlights**
 
-| Field | Validation |
-|------|------------|
-| `full_name` | Required. Must match the registered user. |
-| `unknown_mother` | Optional. Defaults to `false`. |
-| `mother_name` | Required when `unknown_mother = false`; optional when `unknown_mother = true`. |
-| `birth_date` | Required. Format: `YYYY-MM-DD`. |
-| `tax_id` | Required. Valid 11-digit CPF. |
-| `new_password` | Required. Minimum 8 characters with uppercase, lowercase, number and special character. |
-| `confirm_password` | Required. Must match `new_password`. |
+- Validated auto-complete formatting rules.
+- Verified CPF and CNS display priority.
+- Tested filtering behavior and navigation flow.
+- Validated integration with the CADSUS service.
+
+**Artifacts**
+
+- Project Overview
+- Test Cases
+- Bug Report
 
 ---
 
-## Test Execution Summary
+### SIGTAP Multi-Tenant Import
 
-| Test Case | Scenario | Expected Result | Outcome |
-|-----------|----------|-----------------|---------|
-| TC-01 | Valid registered mother's name | Password reset completed successfully | ✅ PASS |
-| TC-02 | Incorrect mother's name | Validation error | ✅ PASS |
-| TC-03 | Invalid `unknown_mother` flag | Business rule validation | ✅ PASS |
-| TC-04 | User without registered mother's name | Password reset completed successfully | ✅ PASS |
-| TC-05 | Missing required `mother_name` | Validation error | ✅ PASS |
+**Focus**
 
----
+Validation of SIGTAP batch imports, tenant isolation, asynchronous processing, and procedural protection rules.
 
-## QA Activities
+**Highlights**
 
-- REST API functional testing
-- API contract validation
-- Business rule validation
-- Positive testing
-- Negative testing
-- Edge case testing
-- Database validation using SQL
-- JSON payload validation
-- HTTP status code verification
-- Response body validation
-- Regression testing
-- Defect reporting
+- Validated multi-tenant import processing.
+- Tested procedure protection switches.
+- Verified scheduling restrictions.
+- Validated queue execution and error handling.
+
+**Artifacts**
+
+- Project Overview
+- Test Cases
+- Bug Report
 
 ---
 
-## Key Achievements
+## QA Skills Demonstrated
 
-### Business Rule Analysis
-
-Identified an edge case during requirements analysis where users without a registered mother's name could become blocked from recovering their passwords.
-
-### Validation Improvement
-
-Worked alongside developers to define conditional validation rules using Laravel Form Requests, ensuring the endpoint respected the intended business logic.
-
-### Database Verification
-
-Validated database records before and after execution, confirming password hash updates and related data integrity.
-
-### API Contract Verification
-
-Verified request payload validation, response structure, HTTP status codes, and error messages to ensure compliance with the API specification.
-
----
-
-## Skills Demonstrated
-
-- REST API Testing
+- Test Planning
 - Functional Testing
-- Backend Testing
+- REST API Testing
+- API Contract Validation
 - Business Rule Validation
-- API Contract Testing
-- SQL Database Validation
-- Edge Case Testing
-- Test Case Design
-- JSON Validation
+- UI/UX Testing
+- Integration Testing
 - Regression Testing
+- Edge Case Testing
+- SQL Database Validation
+- DOM Inspection
+- Log Analysis
+- Queue Monitoring
 - Defect Reporting
-- Healthcare Systems QA
+
+---
+
+## Technologies & Tools
+
+| Category | Technologies |
+|----------|--------------|
+| API Testing | Postman, Insomnia |
+| Database | PostgreSQL, MySQL |
+| Backend | Laravel, PHP |
+| Frontend Inspection | Chrome DevTools |
+| Queue Monitoring | Laravel Horizon, Redis |
+| Infrastructure | Nginx, PHP-FPM, Linux |
+| Project Management | Git, GitHub Issues, GitHub Projects |
+
+---
+
+## Professional Profile
+
+**Role**
+
+Quality Assurance Analyst / Manual QA Specialist
+
+**Platforms**
+
+- Linux (Ubuntu)
+- Windows
